@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import Item from './Item';
+import propTypes from 'prop-types';
 
 class ItemList extends Component {
   render () {
@@ -13,6 +14,10 @@ class ItemList extends Component {
       </div>
     )
   }
+}
+
+ItemList.propTypes = {
+	items: propTypes.array.isRequired,
 }
 
 export default ItemList;
