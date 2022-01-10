@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 
 class CreateButton extends Component {
   render() {
@@ -7,6 +8,10 @@ class CreateButton extends Component {
       <button disabled={disabled}>Add</button>
     )
   }
+}
+
+CreateButton.propTypes = {
+  disabled : PropTypes.bool.isRequired,
 }
 
 export default CreateButton;
