@@ -35,28 +35,27 @@ class App extends Component {
   }
 
   userExists = (userName) => {
-		// If the username sended is already taken and shows an alert and return true.
-		const duplicated = this.state.users.filter( user => user.userName === userName)
+	// If the username sended is already taken and shows an alert and return true.
+	const duplicated = this.state.users.filter( user => user.userName === userName)
 
-		if (duplicated.length > 0) {
-			alert("That username is already taken")
-			return true;
-		}
-		return false
+	if (duplicated.length > 0) {
+		alert("That username is already taken")
+		return true;
 	}
+	return false
+  }
 
   addUser = (user) => {
-  // Add a new user to the users lists and update the counter.
-  // Receives an object with user attributes and adds default games number, and an user id.
-      user.games = 0
-      user.id = this.state.count + 1
+	// Add a new user to the users lists and update the counter.
+	// Receives an object with user attributes and adds default games number, and an user id.
+	user.games = 0
+	user.id = this.state.count + 1
 
-      this.setState ( oldState => ({
-        users: [...oldState.users, user],
-        count: [...oldState.count + 1 ]      
-      }))
-      console.log("New username:", user.userName)
-  }
+	this.setState ( oldState => ({
+	users: [...oldState.users, user],
+	count: [...oldState.count + 1 ]      
+	}))
+}
 
 
   render() {
@@ -72,6 +71,6 @@ class App extends Component {
 		  </div>
     );
   }
-}
+  }
 
 export default App;
