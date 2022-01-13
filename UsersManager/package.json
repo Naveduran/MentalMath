@@ -1,0 +1,20 @@
+{
+  "name": "lifting-state-up",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "prop-types": "^15.6.1",
+    "react": "^17.0.0",
+    "react-dom": "^17.0.0",
+    "react-scripts": "1.1.4",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/material": "^5.0.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
